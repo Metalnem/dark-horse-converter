@@ -11,6 +11,7 @@ import (
 	"io/ioutil"
 	"log"
 	"math"
+	"mime"
 	"os"
 	"path/filepath"
 	"sort"
@@ -116,7 +117,6 @@ func convert(inputFiles map[string]inputFile) ([]outputFile, error) {
 
 	outputFiles := make([]outputFile, len(pages))
 	numberOfDigits := int(math.Floor(math.Log10(float64(len(pages)))) + 1)
-	format := fmt.Sprintf("%%0%dd.jpg", numberOfDigits)
 
 	for i, page := range pages {
 		image, ok := inputFiles[page.SourceImage]
@@ -132,6 +132,17 @@ func convert(inputFiles map[string]inputFile) ([]outputFile, error) {
 			return nil, err
 		}
 
+		extensions, err := mime.ExtensionsByType(page.MimeType)
+
+		if err != nil {
+			return nil, err
+		}
+
+		if len(extensions) == 0 {
+			return nil, errors.New("Unknown image type found inside archive")
+		}
+
+		format := fmt.Sprintf("%%0%dd%s", numberOfDigits, extensions[0])
 		header.Name = fmt.Sprintf(format, i+1)
 		outputFiles[i] = outputFile{header: header, content: image.content}
 	}
