@@ -3,7 +3,9 @@ Converts digital Dark Horse comics into CBZ format. Comics are delivered to offi
 
 ## Downloading comics
 
-Following steps apply to Chrome web browser on Max OS X (steps shouldn't be much different for any other OS/browser combination).
+Easiest way to download Dark Horse comics is by using [Dark Horse downloader](https://chrome.google.com/webstore/detail/dark-horse-downloader/odciinkioeagogcogbpelccibomlenhl) Chrome extension.
+
+If you don't want to install the extension, you can do it manually (following steps apply to Chrome web browser on Max OS X, but shouldn't be much different for any other OS/browser combination).
 
 1) Open Chrome and go to [your library](https://digital.darkhorse.com/library/).
 
@@ -40,6 +42,11 @@ https://digital.darkhorse.com/api/v6/book/9f1bb1e5dd524127bbdd0bba39d022e2
 ```
 $ go get github.com/metalnem/dark-horse-converter
 ```
+
+## Binaries (x64)
+
+[Windows](https://github.com/Metalnem/dark-horse-converter/releases/download/v1.0.0/dark-horse-converter-win64-1.0.0.zip)  
+[Mac OS X](https://github.com/Metalnem/dark-horse-converter/releases/download/v1.0.0/dark-horse-converter-darwin64-1.0.0.zip)
 
 ## Usage
 
