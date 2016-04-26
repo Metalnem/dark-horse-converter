@@ -1,4 +1,4 @@
-# Dark Horse converter [![Build Status](https://travis-ci.org/Metalnem/dark-horse-converter.svg?branch=master)](https://travis-ci.org/Metalnem/dark-horse-converter)
+# Dark Horse converter [![Build Status](https://travis-ci.org/Metalnem/dark-horse-converter.svg?branch=master)](https://travis-ci.org/Metalnem/dark-horse-converter) [![Go Report Card](https://goreportcard.com/badge/github.com/metalnem/dark-horse-converter)](https://goreportcard.com/report/github.com/metalnem/dark-horse-converter) [![license](https://img.shields.io/badge/license-MIT-blue.svg?style=flat)](https://raw.githubusercontent.com/metalnem/dark-horse-converter/master/LICENSE)
 Converts digital Dark Horse comics into CBZ format. Comics are delivered to official iOS/Android clients as a tar archive that is not compatible with other comic book readers, so you have to convert them using this application before you can open them in the reader of your choice.
 
 ## Downloading comics
